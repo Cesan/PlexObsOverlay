@@ -6,8 +6,10 @@ PlexObsOverlay is a simple and lightweight ASP.NET Core application which uses P
 
 - ⚠️ As the PlexObsOverlay relies on Plex Webhooks which is currently a Plex Pass only feature, you can only use it on Plex accounts which have a active Plex Pass subscription! ⚠️
 
-To use this first download the latest release on the [releases page](https://github.com/Cesan/PlexObsOverlay/releases) and put it where you want to run it.
+To use this first download the latest release on the [releases page](https://github.com/Cesan/PlexObsOverlay/releases) and put it where you want to run it. 
 > Recommended to run either on the same machine as the Plex server or in the same local network as both the Plex server and OBS
+
+Also download and install the latest [.NET 7 runtime](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) if not installed already.
 
 Next set up the webhook on your plex account pointing to the address you are using this program on (e.g. `http://192.168.0.2:xxxx` where 'xxxx' is the port which defaults to 5727). 
 > If you don't know how to set up a webhook on your plex account see this [article by plex](https://support.plex.tv/articles/115002267687-webhooks/)
