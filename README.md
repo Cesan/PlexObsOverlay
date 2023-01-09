@@ -1,3 +1,5 @@
+![firefox_hvU2cKXz7m](https://user-images.githubusercontent.com/33752516/211348722-bfd1d9bb-9b6b-4a4b-8be2-065c7739c60f.png)
+
 # About PlexObsOverlay
 
 PlexObsOverlay is a simple and lightweight ASP.NET Core application which uses Plex webhooks to generate a browser rendered OBS overlay for the currently playing song which can be used directly as a browser source.
@@ -27,3 +29,7 @@ Now that the webhook is set up you can start the PlexObsOverlay application. Met
 
 You can now use the overlay as a browser source on OBS using the ip address the PlexObsOverlay is running on.
 > The default height of the overlay is 120px, this can be changed in the `wwwroot/css/site.css` file
+
+# Preview
+
+![obs64_IyHwSiMboU](https://user-images.githubusercontent.com/33752516/211349445-37593043-b047-46f1-9084-028f97b82ffe.png)
