@@ -6,6 +6,8 @@ PlexObsOverlay is a simple and lightweight ASP.NET Core application which uses P
 
 - ⚠️ As the PlexObsOverlay relies on Plex Webhooks which is currently a Plex Pass only feature, you can only use it on Plex accounts which have a active Plex Pass subscription! ⚠️
 
+### Setup
+
 To use this first download the latest release on the [releases page](https://github.com/Cesan/PlexObsOverlay/releases) and put it where you want to run it. 
 > Recommended to run either on the same machine as the Plex server or in the same local network as both the Plex server and OBS
 
@@ -13,6 +15,13 @@ Also download and install the latest [.NET 7 runtime](https://dotnet.microsoft.c
 
 Next set up the webhook on your plex account pointing to the address you are using this program on (e.g. `http://192.168.0.2:xxxx` where 'xxxx' is the port which defaults to 5727). 
 > If you don't know how to set up a webhook on your plex account see this [article by plex](https://support.plex.tv/articles/115002267687-webhooks/)
+
+### Config
+
+PlexObsOverlay should run out of the box and work in every scenario, to configure the behavior more specifically the `appsettings.json` file provides configurable properties like the address (defaults to `http://*:5727` which listens on all network interfaces) and the Plex username the overlay should listen for (defaults to `*` which will listen on all users of your Plex account)
+> Further instructions on how to set up properties is described in the file as comments
+
+### Running
 
 Now that the webhook is set up you can start the PlexObsOverlay application. Metadata is exchanged only on song changes, so the first visible update happens after the song changes for the first time.
 
