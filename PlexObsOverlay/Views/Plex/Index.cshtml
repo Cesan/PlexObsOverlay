@@ -1,0 +1,57 @@
+﻿@page
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Overlay</title>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+</head>
+<body>
+<div id="overlay">
+    None!
+</div>
+
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+
+<script>
+
+let connection = new signalR.HubConnectionBuilder()
+    .withUrl("/metadataHub")
+    .build();
+
+$(async function () {
+    try {
+        await connection.start();
+    } catch (err) {
+        console.log(err);
+    }
+    
+    $.ajax({
+        url: "@Url.Action("Overlay")",
+        type: 'GET',
+        success: function (data) {
+            $('#overlay').html(data);
+        }
+    });
+});
+
+connection.on("update", function () {
+    $.ajax({
+        url: "@Url.Action("Overlay")",
+        type: 'GET',
+        success: function (data) {
+            $('#overlay').html(data);
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
